@@ -1,3 +1,295 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+
+// Language Toggle Styles
+/**/
+/* .language-toggle { */
+/*   position: fixed; */
+/*   top: 1rem; */
+/*   right: 1rem; */
+/*   z-index: 1000; */
+/*   display: flex; */
+/*   align-items: center; */
+/*   gap: 0.5rem; */
+/*   background: rgba(255, 255, 255, 0.95); */
+/*   backdrop-filter: blur(10px); */
+/*   border-radius: 8px; */
+/*   padding: 0.5rem; */
+/*   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+/**/
+/*   border: 1px solid rgba(0, 0, 0, 0.1); */
+/**/
+/*   @media (max-width: 768px) { */
+/*     position: absolute; */
+/*     top: 0.5rem; */
+/*     right: 0.5rem; */
+/*   } */
+/* } */
+/**/
+/**/
+/* .current-lang-indicator { */
+/*   font-size: 1.2em; */
+/*   opacity: 0.7; */
+/* } */
+/**/
+/* .lang-switch-btn { */
+/*   background: var(--primary, #2563eb); */
+/*   color: white !important; */
+/*   padding: 0.4rem 0.8rem; */
+/*   border-radius: 6px; */
+/*   text-decoration: none; */
+/*   font-weight: 500; */
+/*   font-size: 0.9rem; */
+/*   transition: all 0.2s ease; */
+/**/
+/*   border: none; */
+/*   cursor: pointer; */
+/**/
+/*   &:hover { */
+/*     background: var(--primary-dark, #1d4ed8); */
+/*     transform: translateY(-1px); */
+/**/
+/*     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+/*   } */
+/**/
+/*   &:active { */
+/*     transform: translateY(0); */
+/*   } */
+/* } */
+/**/
+/* // Dark mode support */
+/* .darkmode { */
+/*   .language-toggle { */
+/*     background: rgba(31, 41, 55, 0.95); */
+/*     border-color: rgba(255, 255, 255, 0.1); */
+/*   } */
+/* } */
+
+/* // Minimalist & Elegant Language Toggle for Quartz (Obsidian.md) */
+/* .language-toggle { */
+/*   position: fixed; */
+/*   top: 1rem; */
+/*   right: 1rem; */
+/*   z-index: 9999; */
+/*   display: flex; */
+/*   align-items: center; */
+/*   gap: 0.5rem; */
+/**/
+/*   background: rgba(255, 255, 255, 0.85); */
+/*   backdrop-filter: blur(8px); */
+/**/
+/*   border-radius: 10px; */
+/*   padding: 0.4rem 0.8rem; */
+/*   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); */
+/**/
+/*   border: 1px solid rgba(0, 0, 0, 0.04); */
+/**/
+/*   font-family: inherit; */
+/*   font-size: 0.9rem; */
+/**/
+/*   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease; */
+/**/
+/*   animation: slideInFromTop 0.4s ease-out; */
+/**/
+/*   &:hover { */
+/*     transform: translateY(-2px); */
+/*     box-shadow: 0 6px 22px rgba(0, 0, 0, 0.12); */
+/*   } */
+/**/
+/*   @media (max-width: 768px) { */
+/*     top: 0.6rem; */
+/*     right: 0.6rem; */
+/*     padding: 0.35rem 0.6rem; */
+/*   } */
+/**/
+/*   @media (max-width: 480px) { */
+/*     position: absolute; */
+/*     top: 10px; */
+/*     right: 10px; */
+/*   } */
+/* } */
+/**/
+/* .current-lang-indicator { */
+/*   font-size: 1rem; */
+/*   opacity: 0.75; */
+/*   margin-right: 0.2rem; */
+/*   color: inherit; */
+/* } */
+/**/
+/**/
+/* .lang-switch-btn { */
+/**/
+/*   background: linear-gradient(135deg, var(--primary, #3b82f6), var(--secondary, #2563eb)); */
+/*   color: #fff !important; */
+/*   padding: 0.35rem 0.7rem; */
+/*   border-radius: 6px; */
+/*   font-weight: 500; */
+/**/
+/*   font-size: 0.85rem; */
+/**/
+/*   display: flex; */
+/*   align-items: center; */
+/*   gap: 0.3rem; */
+/**/
+/*   border: none; */
+/*   cursor: pointer; */
+/**/
+/*   transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease; */
+/**/
+/**/
+/*   &:hover { */
+/*     background: linear-gradient(135deg, var(--primary-dark, #2563eb), var(--secondary-dark, #1d4ed8)); */
+/**/
+/*     transform: scale(1.04); */
+/*     box-shadow: 0 4px 14px rgba(59, 130, 246, 0.25); */
+/*   } */
+/**/
+/*   &:active { */
+/*     transform: scale(1.01); */
+/*   } */
+/**/
+/*   @media (max-width: 768px) { */
+/*     padding: 0.3rem 0.6rem; */
+/*     font-size: 0.8rem; */
+/*   } */
+/* } */
+/**/
+/* // Dark Mode Support */
+/* .darkmode { */
+/*   .language-toggle { */
+/*     background: rgba(31, 41, 55, 0.9); */
+/*     border-color: rgba(255, 255, 255, 0.08); */
+/*     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25); */
+/*   } */
+/**/
+/**/
+/*   .current-lang-indicator { */
+/*     opacity: 0.85; */
+/*     color: #e5e7eb; */
+/*   } */
+/**/
+/*   .lang-switch-btn { */
+/*     background: linear-gradient(135deg, var(--primary-dark, #1e40af), var(--secondary-dark, #1e3a8a)); */
+/**/
+/*     &:hover { */
+/*       background: linear-gradient(135deg, #1d4ed8, #1e40af); */
+/*       box-shadow: 0 4px 14px rgba(147, 197, 253, 0.2); */
+/*     } */
+/*   } */
+/* } */
+/**/
+/* // Slide Animation */
+/* @keyframes slideInFromTop { */
+/*   from { */
+/*     opacity: 0; */
+/*     transform: translateY(-16px); */
+/*   } */
+/**/
+/*   to { */
+/*     opacity: 1; */
+/*     transform: translateY(0); */
+/**/
+/*   } */
+/* } */
+/**/
+/* // Prevent layout conflicts */
+/* body { */
+/*   padding-right: 0 !important; */
+/**/
+/* } */
+/**/
+/* // Ensure toggle positioning works in themes */
+/* .page-header, header, nav { */
+/*   position: relative; */
+/* } */
+/**/
+
+.language-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+
+  z-index: 9999;
+
+
+  .switch {
+    position: relative;
+    width: 70px;
+    height: 30px;
+    background-color: #ebbcba; // Updated color
+    border-radius: 999px;
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+    font-family: 'Helvetica', Arial, sans-serif;
+  }
+
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+
+  .slider {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    width: 26px;
+    background-color: #fff;
+    border-radius: 999px;
+    transition: all 0.3s ease;
+    z-index: 2;
+  }
+
+  input:checked + .slider {
+    transform: translateX(38px);
+  }
+
+  .label-fr,
+  .label-en {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 30px;
+
+    color: white;
+    z-index: 1;
+    pointer-events: none;
+    text-transform: uppercase;
+
+  }
+
+  .label-fr {
+    left: 0;
+    color: #fff;
+  }
+
+
+  .label-en {
+
+    right: 0;
+    color: #fff;
+  }
+
+
+  input:checked ~ .label-fr {
+    color: #fff;
+  }
+
+  input:checked ~ .label-en {
+    color: #ebbcba; // Updated color
+  }
+
+  @media (max-width: 768px) {
+    top: 0.5rem;
+    right: 0.5rem;
+    transform: scale(0.9);
+  }
+}
+
