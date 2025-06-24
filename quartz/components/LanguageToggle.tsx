@@ -16,22 +16,25 @@ export default (() => {
         // const basePath = needsPortfolioPrefix ? "/Portfolio" : ""
         // const fullUrl = `${basePath}/${String(otherPath)}`
 
-        // Détecter l'environnement en regardant l'URL actuelle
-        let fullUrl
+        const currentSlug = fileData.slug || ''
+        console.log('Current slug:', currentSlug)
 
-        if (typeof window !== 'undefined') {
-            const currentPath = window.location.pathname
-            if (currentPath.includes('/Portfolio/')) {
-                // GitHub
-                fullUrl = '/Portfolio/' + String(otherPath)
-            } else {
-                // local
-                fullUrl = '/' + String(otherPath)
-            }
+        console.log('Other path:', otherPath)
+
+        // Vérifier si on a une config de base URL dans fileData
+
+        const hasPortfolioBase = window?.location?.href?.includes('github.io/Portfolio') || false
+        console.log('Has Portfolio base:', hasPortfolioBase)
+
+
+        let fullUrl
+        if (hasPortfolioBase) {
+            fullUrl = '/Portfolio/' + String(otherPath)
         } else {
-            // Fallback si window n'est pas disponible
             fullUrl = '/' + String(otherPath)
         }
+
+        console.log('Final URL:', fullUrl)
 
         return (
             <div className="language-toggle">
