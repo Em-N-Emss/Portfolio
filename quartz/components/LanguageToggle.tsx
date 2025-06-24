@@ -1,7 +1,7 @@
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 
 export default (() => {
-    const LanguageToggle: QuartzComponent = ({ fileData }: QuartzComponentProps) => {
+    const LanguageToggle: QuartzComponent = ({ fileData, cfg }: QuartzComponentProps) => {
         const translations = fileData.frontmatter?.translations
         const currentLang = fileData.frontmatter?.lang || 'fr'
 
@@ -16,24 +16,20 @@ export default (() => {
         // const basePath = needsPortfolioPrefix ? "/Portfolio" : ""
         // const fullUrl = `${basePath}/${String(otherPath)}`
 
-        const currentSlug = fileData.slug || ''
-        console.log('Current slug:', currentSlug)
-
+        // Utiliser la configuration de Quartz pour détecter l'environnement
+        const baseUrl = cfg?.baseUrl || ''
+        console.log('Base URL from config:', baseUrl)
         console.log('Other path:', otherPath)
-
-        // Vérifier si on a une config de base URL dans fileData
-
-        const hasPortfolioBase = window?.location?.href?.includes('github.io/Portfolio') || false
-        console.log('Has Portfolio base:', hasPortfolioBase)
 
 
         let fullUrl
-        if (hasPortfolioBase) {
+        if (baseUrl.includes('github.io/Portfolio')) {
+            // On est sur GitHub Pages
             fullUrl = '/Portfolio/' + String(otherPath)
         } else {
+            // On est en local ou autre
             fullUrl = '/' + String(otherPath)
         }
-
         console.log('Final URL:', fullUrl)
 
         return (
