@@ -12,9 +12,13 @@ export default (() => {
         const otherLang = currentLang === "en" ? "fr" : "en"
         const otherPath = translations[otherLang]
 
-        const needsPortfolioPrefix = typeof window !== "undefined" && window.location.pathname.startsWith("em-n-emss.github.io/Portfolio/")
+        const needsPortfolioPrefix = typeof window !== "undefined" && window.location.pathname.startsWith("/Portfolio/")
         const basePath = needsPortfolioPrefix ? "/Portfolio" : ""
         const fullUrl = `${basePath}/${String(otherPath)}`
+
+        console.log('Needs prefix:', needsPortfolioPrefix)
+        console.log('Base path:', basePath)
+        console.log('Final URL:', `${basePath}/${String(otherPath)}`)
 
         return (
             <div className="language-toggle">
