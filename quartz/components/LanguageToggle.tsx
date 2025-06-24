@@ -12,8 +12,8 @@ export default (() => {
         const otherLang = currentLang === "en" ? "fr" : "en"
         const otherPath = translations[otherLang]
 
-        const needsPortfolioPrefix = typeof window !== "undefined" && window.location.pathname.startsWith("/Portefolio/")
-        const basePath = needsPortfolioPrefix ? "/Portefolio" : ""
+        const needsPortfolioPrefix = typeof window !== "undefined" && window.location.pathname.startsWith("/Portfolio/")
+        const basePath = needsPortfolioPrefix ? "/Portfolio" : ""
         const fullUrl = `${basePath}/${String(otherPath)}`
 
         return (
