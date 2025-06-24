@@ -17,9 +17,9 @@ export default (() => {
         // const fullUrl = `${basePath}/${String(otherPath)}`
         const fullUrl = "/Portfolio/${String(otherPath)}"
 
-        console.log('Needs prefix:', needsPortfolioPrefix)
-        console.log('Base path:', basePath)
-        console.log('Final URL:', `${basePath}/${String(otherPath)}`)
+        // console.log('Needs prefix:', needsPortfolioPrefix)
+        // console.log('Base path:', basePath)
+        // console.log('Final URL:', `${basePath}/${String(otherPath)}`)
 
         return (
             <div className="language-toggle">
