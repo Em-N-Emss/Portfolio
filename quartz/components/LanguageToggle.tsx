@@ -15,11 +15,23 @@ export default (() => {
         // const needsPortfolioPrefix = typeof window !== "undefined" && window.location.pathname.startsWith("/Portfolio/")
         // const basePath = needsPortfolioPrefix ? "/Portfolio" : ""
         // const fullUrl = `${basePath}/${String(otherPath)}`
-        const fullUrl = "/Portfolio/${String(otherPath)}"
 
-        // console.log('Needs prefix:', needsPortfolioPrefix)
-        // console.log('Base path:', basePath)
-        // console.log('Final URL:', `${basePath}/${String(otherPath)}`)
+        // Détecter l'environnement en regardant l'URL actuelle
+        let fullUrl
+
+        if (typeof window !== 'undefined') {
+            const currentPath = window.location.pathname
+            if (currentPath.includes('/Portfolio/')) {
+                // GitHub
+                fullUrl = '/Portfolio/' + String(otherPath)
+            } else {
+                // local
+                fullUrl = '/' + String(otherPath)
+            }
+        } else {
+            // Fallback si window n'est pas disponible
+            fullUrl = '/' + String(otherPath)
+        }
 
         return (
             <div className="language-toggle">
