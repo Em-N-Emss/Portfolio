@@ -12,9 +12,10 @@ export default (() => {
         const otherLang = currentLang === "en" ? "fr" : "en"
         const otherPath = translations[otherLang]
 
-        const needsPortfolioPrefix = typeof window !== "undefined" && window.location.pathname.startsWith("/Portfolio/")
-        const basePath = needsPortfolioPrefix ? "/Portfolio" : ""
-        const fullUrl = `${basePath}/${String(otherPath)}`
+        // const needsPortfolioPrefix = typeof window !== "undefined" && window.location.pathname.startsWith("/Portfolio/")
+        // const basePath = needsPortfolioPrefix ? "/Portfolio" : ""
+        // const fullUrl = `${basePath}/${String(otherPath)}`
+        const fullUrl = "/Portfolio/${String(otherPath)}"
 
         console.log('Needs prefix:', needsPortfolioPrefix)
         console.log('Base path:', basePath)
