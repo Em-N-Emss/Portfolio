@@ -12,7 +12,7 @@ export default (() => {
         const otherLang = currentLang === "en" ? "fr" : "en"
         const otherPath = translations[otherLang]
 
-        const needsPortfolioPrefix = typeof window !== "undefined" && window.location.pathname.startsWith("/Portfolio/")
+        const needsPortfolioPrefix = typeof window !== "undefined" && window.location.pathname.startsWith("em-n-emss.github.io/Portfolio/")
         const basePath = needsPortfolioPrefix ? "/Portfolio" : ""
         const fullUrl = `${basePath}/${String(otherPath)}`
 
