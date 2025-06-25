@@ -3,7 +3,7 @@ import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } fro
 export default (() => {
     const LanguageToggle: QuartzComponent = ({ fileData, cfg }: QuartzComponentProps) => {
         const translations = fileData.frontmatter?.translations
-        const currentLang = fileData.frontmatter?.lang || 'fr'
+        const currentLang = fileData.frontmatter?.lang || "fr"
 
         if (!translations) {
             return null
@@ -11,10 +11,6 @@ export default (() => {
 
         const otherLang = currentLang === "en" ? "fr" : "en"
         const otherPath = translations[otherLang]
-
-        // const needsPortfolioPrefix = typeof window !== "undefined" && window.location.pathname.startsWith("/Portfolio/")
-        // const basePath = needsPortfolioPrefix ? "/Portfolio" : ""
-        // const fullUrl = `${basePath}/${String(otherPath)}`
 
         let fullUrl: string
 
