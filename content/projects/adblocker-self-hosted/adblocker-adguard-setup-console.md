@@ -45,14 +45,6 @@ Il faut ensuite rentrer l'adresses configuré dans les champs comme ci-dessous :
 
 ![[Pasted image 20250627134332.png]]
 
-## Configuration sur l'appareil
-
-Après avoir finit toutes les étapes, il faut faire en sorte que l'appareil bloque les publicités en lui donnant le DNS que nous avons configuré
-
-Pour cela, il faut aller dans les paramètres des cables ethernet et entrée les informations suivantes :
-
-![[Pasted image 20250627151751.png]]
-
 ---
 
 ## Links
