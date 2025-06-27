@@ -23,7 +23,7 @@ Comme ce dernier s'étend de **192.168.1.1** jusqu'à **192.168.1.200**, j'utili
 
 Mes autres VMs suivront le même schéma ( VM1 : 192.168.1.202, VM2 : 192.168.1.203...)
 
-> ![NOTE]
+> [!NOTE]
 > Ne pas oublier de décocher "Automatically reboot after successful installation" car :
 > - Si jamais il y a un problème dans l'installation ce sera plu ssimple de redéarrer l'installation
 > - Si après l'installation la clé usb reboot, le pc va reboot la clé usb en boucle (been there done that)
