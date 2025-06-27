@@ -11,7 +11,7 @@ tags:
 
 Le meilleur moyen d'apprendre est de s'exposer directement aux outils
 
-> ![NOTE]
+> [!NOTE]
 > user: kali ; password : kali
 
 Dans [[proxmox]], créer la VM suivante :
