@@ -5,7 +5,7 @@ lang: fr
 translations:
     en: notelocation.en
 tags:
-    - automation
+    - resources
 ---
 # Comment désactiver cette notification à chaque entrée
 
@@ -88,3 +88,5 @@ systemctl restart pveproxy.service
 [[proxmox]]
 
 [[bash]]
+
+[[resources]]

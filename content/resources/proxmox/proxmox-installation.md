@@ -5,7 +5,7 @@ lang: fr
 translations:
     en: notelocation.en
 tags:
-    -
+    - resources
 ---
 # Comment installer Proxmox avec une petite clé USB
 
@@ -43,3 +43,5 @@ Maintenant proxmox est accessible sur l'adresse **https://192.168.1.201:8006**
 [[homelab]]
 
 [[proxmox]]
+
+[[resources]]
